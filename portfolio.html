@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Areeba Islam - Portfolio</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
+    color: #333;
+    line-height: 1.5;
+  }
+  header#about {
+    background: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 40px 20px 50px;
+    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.6);
+  }
+  header#about img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  header#about img:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  header#about h1 {
+    margin: 0 0 8px;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+  }
+  header#about p {
+    margin: 6px 0;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+  }
+  button.contact-btn {
+    background: #ff6f61;
+    color: white;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 30px auto 0;
+    display: inline-block;
+    font-weight: 600;
+  }
+  button.contact-btn:hover {
+    background: #ff3b1f;
+    transform: scale(1.05);
+  }
+  section {
+    max-width: 880px;
+    margin: 35px auto;
+    background: white;
+    padding: 30px 35px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.07);
+    border-radius: 14px;
+  }
+  section h2 {
+    border-bottom: 4px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #4a90e2;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  ul li {
+    background: #e4f0ff;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    border-radius: 11px;
+    font-size: 1.05em;
+    color: #224a88;
+  }
+  .job-title, .edu-degree {
+    font-weight: 700;
+    font-size: 1.15em;
+    color: #29508a;
+  }
+  .job-duration, .edu-year {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95em;
+    margin-left: 6px;
+  }
+  .project {
+    background: #d9e9ff;
+    padding: 20px 24px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    cursor: default;
+  }
+  .project strong {
+    color: #11396d;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .project ul {
+    margin-top: 5px;
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.05em;
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); 
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 25px 30px;
+    border: 1px solid #888;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+  }
+  .modal-content h3 {
+    margin-top: 0;
+    color: #4a90e2;
+  }
+  .modal-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+  }
+  .close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .close-btn:hover {
+    color: #000;
+  }
+</style>
+</head>
+<body>
+
+<header id="about">
+  <img src="file:///C:/Users/HP/OneDrive/Pictures/areeba123.jpeg" alt="Areeba Islam" title="Click to enlarge photo" />
+  <h1>Areeba Islam</h1>
+  <p>Web Developer (Aspiring) | Content Moderator</p>
+  <p>Shifting career towards Web Development. Skilled in C, C++, Python, HTML, CSS, JavaScript & IoT projects.</p>
+  <button class="contact-btn" id="contactBtn">Contact Me</button>
+</header>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Programming Languages: C, C++, Python</li>
+    <li>Web Development: HTML, CSS, JavaScript</li>
+    <li>IoT Projects: Flood Monitoring & Alerting System</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p><span class="job-title">Content Moderator</span> at Concentrix, Bangalore <span class="job-duration">(Sep 2024 - Mar 2025)</span></p>
+  <p>Handled Google account moderation ensuring compliance and security.</p>
+  <p><span class="job-title">Internship</span> at Zaki Institute (Web Development)</p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <p><span class="edu-degree">MCA</span> (2024) - Integral University, Lucknow</p>
+  <p><span class="edu-degree">BCA</span> (2022) - Integral University, Lucknow</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <strong>IoT Based Flood Monitoring & Alerting System (College Final Project)</strong>
+    <ul>
+      <li>Developed a system using sensors to detect flood in prone areas.</li>
+      <li>Provided alerts via silencer and LED lights to warn local people.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Modal HTML -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h3>Contact Information</h3>
+    <p><strong>Email:</strong> islamareeba177@gmail.com</p>
+    <p><strong>Phone:</strong> 7348241501</p>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("contactModal");
+  const btn = document.getElementById("contactBtn");
+  const span = document.getElementById("closeModal");
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if(event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
